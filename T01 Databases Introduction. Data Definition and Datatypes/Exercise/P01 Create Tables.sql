@@ -1,0 +1,14 @@
+CREATE TABLE `minions` (
+`id` INT(11) AUTO_INCREMENT,
+`name` VARCHAR(50),
+`age` INT(11),
+PRIMARY KEY (`id`))
+Engine = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE `towns` (
+`town_id` INT(11) AUTO_INCREMENT,
+`name` VARCHAR(50),
+PRIMARY KEY (`town_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
