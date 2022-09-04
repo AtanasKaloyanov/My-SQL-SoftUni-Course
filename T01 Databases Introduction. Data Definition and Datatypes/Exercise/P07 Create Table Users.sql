@@ -1,6 +1,6 @@
 CREATE TABLE `users` (
 `id` INT AUTO_INCREMENT NOT NULL,
-`username` VARCHAR(30) UNIQUE NOT NULL,
+`username` VARCHAR(30) NOT NULL,
 `password` VARCHAR(26) NOT NULL,
 `profile_picture` MEDIUMBLOB,
 `last_login_time` TIMESTAMP,
