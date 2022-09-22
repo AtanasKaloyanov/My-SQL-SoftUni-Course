@@ -1,3 +1,5 @@
+DROP FUNCTION `ufn_get_salary_level`;
+
 DELIMITER ###
 CREATE FUNCTION `ufn_get_salary_level`(`given_salary` DECIMAL)
 RETURNS VARCHAR(8)
@@ -12,3 +14,7 @@ END IF;
 RETURN `salary_level`;
 END
 ###
+
+SELECT `ufn_get_salary_level`(29999);
+SELECT `ufn_get_salary_level`(50000);
+SELECT `ufn_get_salary_level`(50001);
