@@ -7,7 +7,8 @@ START TRANSACTION;
 IF (`money_amount` <= 0) THEN ROLLBACK;
 ELSE 
 UPDATE `accounts`
-SET `balance` = `balance` + `money_amount`;
+SET `balance` = `balance` + `money_amount`
+WHERE `accounts`.`id` = `account_id`;
 
 COMMIT;
 END IF;
