@@ -17,12 +17,13 @@ START TRANSACTION;
 IF (`money_amount` <= 0) THEN ROLLBACK;
 ELSE 
 UPDATE `accounts`
-SET `balance` = `balance` + `money_amount`;
-SELECT `A`.`id`, `account_holder_id`, `balance`
-FROM `accounts` AS `A`
-WHERE `A`.`id` = `account_id`;
-
+SET `balance` = `balance` + `money_amount`
+WHERE `accounts`.`id` = `account_id`;
 COMMIT;
+SELECT `id`, `account_holder_id`, `balance`
+FROM `accounts`
+WHERE `accounts`.`id` = `account_id`;
+
 END IF;
 
 END
