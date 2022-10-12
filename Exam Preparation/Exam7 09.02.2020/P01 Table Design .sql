@@ -1,0 +1,14 @@
+DROP SCHEMA `exam`;
+CREATE SCHEMA `exam`;
+USE `exam`;
+
+/*
+CONSTRAINT ``
+FOREIGN KEY (``)
+REFERENCES `` (``)
+*/
+
+
+CREATE TABLE `` (
+`id` INT AUTO_INCREMENT PRIMARY KEY
+);
